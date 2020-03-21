@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Watbooks</title>
+    <link rel="stylesheet" href="{% static "css/base.css" %}">
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Merriweather|Roboto|Roboto+Slab&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="nav-section">
+        <nav class="navbar">
+            <ul>
+                <a href="{% url 'book_app:index' %}"><li>Home</li></a>
+                <a href="{% url 'book_app:book_create' %}"><li>Add Book</li></a>
+                <a href="{% url 'book_app:about' %}"><li>About</li></a>
+            </ul>
+        </nav>
+    </div>
+    {% block body_block %}
+    {% endblock %}
+</body>
+</html>

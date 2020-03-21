@@ -1,0 +1,22 @@
+{% extends 'books/base.html' %}
+{% block body_block %}
+<div class="container">
+    <div class="header">
+        <h1>Delete {{ book.book_title }} by {{ book.author }}?</h1>
+    
+    </div>
+    <div class="button-container">
+        <a href="{% url 'book_app:book_details' pk=book.pk %}">
+            <button class="button-medium">
+                Cancel
+            </button>
+        </a>
+        <form method="POST" class="delete-form">
+            {% csrf_token %}
+            <input type="submit" class='button-medium button-danger' value="Delete">
+        </form>
+            
+    </div>
+</div>
+    
+{% endblock %}

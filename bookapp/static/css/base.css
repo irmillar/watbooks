@@ -1,0 +1,282 @@
+/* General Formatting */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+p {
+}
+
+li {
+    text-decoration: none;
+}
+
+.container {
+    margin: 40px 200px;
+}
+
+/* Base.html Navbar Section */
+.nav-section {
+    height: 100px;
+    margin: 0 auto;
+}
+
+.navbar {
+    padding-left: 205px;
+    position: fixed;
+    background: #4B4C56;
+    width: 100%;
+}
+
+.navbar a {
+    display: inline-block;
+    padding: 30px;
+    height: 100px;
+    background: #4B4C56;
+    text-align: center;
+    width: 250px;
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    font-family: "Crimson Text", serif;
+    font-size: 22px;
+}
+
+.navbar a:hover {
+    background: #36373E;
+}
+
+
+/* ***** Book_list.html ***** */
+
+/* Book_list.html Header Section */
+.header {
+    font-family: "Roboto", sans-serif;
+    margin: 50px 0 20px;
+}
+
+.header h1 {
+    font-size: 2rem;
+    padding: 10px 0;
+    font-weight: lighter;
+}
+
+.header h2 {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.4rem;
+    font-weight: lighter;
+}
+
+
+/* Book_List.html Book Cards Section */
+.books-list {
+    width: 100%;
+    margin-top: 40px;
+}
+
+.books-list a {
+    margin-right: 180px;
+    list-style: none;
+    text-decoration: none;
+}
+
+.book-container {
+    display: inline-flex;
+    width: 200px;
+    height: 250px;
+    margin: 20px 35px 100px 35px;
+    justify-content: space-between;
+}
+
+
+.book-card {
+    background-color: snow;
+    border: 1px solid rgb(117, 117, 117);
+    border-radius: 2px;
+    width: 200px;
+    height: 250px;
+    padding: 15px 15px;
+    color: black;
+    font-family: "Roboto", sans-serif;
+    overflow: hidden;
+    box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.75);
+}
+
+.book-card:hover {
+    background-color: rgb(226, 234, 238);
+}
+
+.book-card h3 {
+    font-size: 1.2rem;
+    padding: 40px 0 30px 0;
+    font-weight: normal;
+}
+
+.book-card h4 {
+    font-size: .9rem;
+    font-weight: lighter;
+}
+
+
+
+
+
+
+/* Book Detail Page */
+.book-detail {
+    width: 100%;
+    margin-top: 50px;
+}
+
+.book-sect {
+    display: inline-block;
+    vertical-align: top;
+    font-family: 'Roboto', sans-serif;
+}
+
+.book-detail .book-image {
+    background-image: url(../images/book_image.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+    height: 250px;
+    width: 200px;
+    margin-right: 4%;
+}
+
+.book-detail .book-info {
+    width: 500px;
+}
+
+.book-detail .book-info h1{
+    font-size: 2.5rem;
+    padding-bottom: 10px;
+    font-weight: lighter;
+}
+
+.book-detail .book-info h2{
+    font-size: 1.8rem;
+    padding-bottom: 30px;
+    font-weight: lighter;
+}
+
+.book-detail .book-info h3{
+    font-size: 1.2rem;
+    padding-bottom: 5px;
+    font-weight: lighter;
+}
+
+.button-container {
+    display: inline-flex;
+    width: 550px;
+    justify-content: space-between;
+}
+
+.button-container a, .delete-form {
+    width: 49.5%;
+}
+
+.button-medium {
+    border: 1px solid grey;
+    background-color: white;
+    color: black;
+    padding: 10px 32px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+
+.button-medium:hover {
+    background-color: rgb(226, 234, 238);
+    cursor: pointer;
+}
+
+.button-danger {
+    background-color: rgb(255, 151, 151);
+}
+
+.button-danger:hover {
+    background-color: rgb(255, 108, 108);
+}
+
+
+
+/* Book Form Page */
+.form {
+    max-width: 600px;
+    min-width: 200px;
+    margin: 20px 0;
+}
+
+.form-group {
+    font-family: "Roboto", sans-serif;
+    padding-bottom: 15px; 
+    min-width: 300px;
+    max-width: 600px;
+}
+
+.form-group label {
+    min-width: 300px;
+    font-size: .9rem;
+    color: rgb(78, 78, 78);
+}
+
+.form-group input, select {
+    width: 100%;
+    min-width: 300px;
+    padding: 7px;
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    border-radius: 2px;
+    border: 1px solid lightgrey;
+}
+
+.form-group input:focus {
+    border-radius: 5px;
+}
+
+.input-button-submit {
+    background-color: #4B4C56;
+    color: white;
+    border: 1px solid grey;
+    padding: 16px;
+    width: 100%;
+    margin-top: 5px;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.input-button-submit:hover {
+    background-color: #36373E;
+    cursor: pointer;
+}
+
+
+
+/* ABOUT PAGE */
+.about-body {
+    width: 100%;
+    margin-top: 40px;
+}
+
+.about-section {
+    font-family: 'Roboto', sans-serif;
+    width: 600px;
+    margin-bottom: 50px;
+}
+.about-section h2 {
+    padding-bottom: 10px;
+    font-weight: lighter;
+    border-bottom: 1px solid lightgrey;
+}
+
+.about-section p {
+    font-size: 1.2rem;
+    padding: 10px 0;
+    line-height: 2rem;
+}

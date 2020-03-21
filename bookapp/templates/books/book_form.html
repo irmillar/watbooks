@@ -1,0 +1,47 @@
+{% extends 'books/base.html' %}
+{% block body_block %}
+{% load widget_tweaks %}
+<div class="container">
+    <div class="header">
+        {% if book.pk %}
+            <h1>Update {{ book.book_title }}</h1>
+        {% else %}
+            <h1>Create Book</h1>
+        {% endif %}
+        
+    </div>
+        <div class="form">
+            <form method="POST">
+                {% csrf_token %}
+                {% for hidden in form.hidden_fields %}
+                    {{ hidden }}
+                {% endfor %}
+
+                {% for field in form.visible_fields %}
+                    <div class="form-group">
+                        <label for="{{ form.id_for_label }}">{{ field.label }}</label>
+                        {{ field }}
+                        {% for error in field.errors %}
+                            <span class="help-block">{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% endfor %}
+                <input type="submit" name="" value="Submit" class="input-button-submit">
+            </form>
+            {% if book.pk %}
+                <a href="{% url 'book_app:book_details' pk=book.pk %}">
+                    <button class="button-medium">
+                        Cancel
+                    </button>
+                </a>
+            {% else %}
+            <a href="{% url 'book_app:index' %}">
+                <button class="button-medium">
+                    Cancel
+                </button>
+            </a>
+            {% endif %}
+        </div>
+</div>
+    
+{% endblock %}
